@@ -92,7 +92,8 @@ export function AboutSection() {
 
         <div className="flex flex-col items-center gap-10 sm:gap-14">
           <AnimatedText
-          text="Full-time student in Computer Science & Technology at Vanier College. I am "
+          text="Full-time Computer Science & Technology student at Vanier College in Montreal. I like this field a lot because you can turn a vague idea into something you can personalize and build what you envision. I am always curious about new technologies and programming languages and often find myself doing hours on research on various topics."
+          
           className="font-medium text-center leading-relaxed max-w-[600px]"
             style={{ color: "var(--page-fg)", fontSize: "clamp(0.9rem, 1.6vw, 1.25rem)" }}
           />

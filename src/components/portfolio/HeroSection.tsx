@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 import { ThemeToggle } from "./ThemeToggle";
 import { ScrollProgressBar } from "./ScrollProgressBar";
-import { useActiveSection } from "@/hooks/useActiveSection";
+import { useActiveSection } from "@/components/useActiveSection";
 
 const navItems = [
   { label: "About me", href: "#about-me" },

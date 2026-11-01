@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Github, ArrowUpRight } from "lucide-react";
 import { LiveProjectButton } from "./LiveProjectButton";
 import mariHacks from "@/assets/projects/mariehacks-demo.png";
 import flutterFinanceTracker from "@/assets/projects/financetracker-demo.png";
@@ -96,7 +96,7 @@ const PROJECTS = [
       { name: "RESTful API", slug: "postman" },
     ],
     image: null,
-    isBlocked: true,
+    isPrivate: true,
   },
     {
     num: "05",
@@ -181,7 +181,7 @@ export function ProjectsSection() {
       </h2>
 
       <div className="pb-[20vh]">
-        {PROJECTS.map((p, i) => {
+                {PROJECTS.map((p, i) => {
           // const targetScale = Math.max(0.92, 1 - (PROJECTS.length - 1 - i) * 0.02);
           const targetScale = 1;
           const range = [i / PROJECTS.length, 1];
@@ -196,6 +196,25 @@ export function ProjectsSection() {
             />
           );
         })}
+
+        {/* See more on GitHub */}
+        <div className="mt-16 sm:mt-20 md:mt-24 flex justify-center">
+          <motion.a
+            href="https://github.com/Thevinh0207"
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="btn-primary group inline-flex items-center gap-2.5 rounded-full px-9 py-4 text-sm md:text-base font-semibold tracking-wide transition-all duration-300"
+          >
+            <Github className="w-4 h-4 md:w-5 md:h-5" strokeWidth={2.5} />
+            See more on GitHub!
+            <ArrowUpRight
+              className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              strokeWidth={2.5}
+            />
+          </motion.a>
+        </div>
       </div>
     </section>
   );
