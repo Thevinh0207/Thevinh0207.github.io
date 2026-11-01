@@ -317,3 +317,8 @@ html.light .contact-social-btn:hover {
 .btn-primary:hover {
   box-shadow: 0 0 40px color-mix(in srgb, var(--page-bg-invert) 30%, transparent);
 }
+
+.contact-field::placeholder {
+  color: var(--page-fg);
+  opacity: 0.4;
+}

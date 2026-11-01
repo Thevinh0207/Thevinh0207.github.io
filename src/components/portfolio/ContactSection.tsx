@@ -117,8 +117,8 @@ export function ContactSection() {
     }
   }
 
-  const fieldBaseClass =
-    "w-full rounded-2xl border px-5 py-4 text-base outline-none transition-all focus:border-opacity-60 disabled:opacity-50";
+    const fieldBaseClass =
+    "contact-field w-full rounded-2xl border px-5 py-4 text-base outline-none transition-all focus:border-opacity-60 disabled:opacity-50";
   const fieldStyle = (hasError: boolean): React.CSSProperties => ({
     borderColor: hasError ? "#ef4444" : "var(--hairline)",
     background: "color-mix(in srgb, var(--page-fg) 4%, transparent)",
@@ -253,8 +253,7 @@ export function ContactSection() {
                 disabled={status === "submitting" || status === "success"}
                 whileHover={{ scale: status === "idle" || status === "error" ? 1.02 : 1 }}
                 whileTap={{ scale: status === "idle" || status === "error" ? 0.98 : 1 }}
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition-shadow hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
-
+                className="btn-primary group flex w-full items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
               >
                 {status === "submitting" && (
                   <>
