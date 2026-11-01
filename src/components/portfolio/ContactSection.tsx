@@ -5,28 +5,28 @@ import { FadeIn } from "./FadeIn";
 const socials = [
   {
     label: "GitHub",
-    value: "@JavierDvlpr",
-    href: "https://github.com/JavierDvlpr",
+    value: "@Thevinh0207",
+    href: "https://github.com/Thevinh0207",
     Icon: Github,
   },
   {
     label: "LinkedIn",
-    value: "in/javiercastillodev",
-    href: "https://linkedin.com/in/javiercastillodev",
+    value: "in/thevinhvuong",
+    href: "https://linkedin.com/in/thevinhvuong",
     Icon: Linkedin,
   },
-  {
-    label: "WhatsApp",
-    value: "+57 3054077706",
-    href: "https://wa.me/573054077706",
-    Icon: MessageCircle,
-  },
+  // {
+  //   label: "WhatsApp",
+  //   value: "+57 3054077706",
+  //   href: "https://wa.me/573054077706",
+  //   Icon: MessageCircle,
+  // },
 ];
 
 export function ContactSection() {
   return (
     <section
-      id="contacto"
+      id="contact"
       className="contact-surface relative w-full px-4 py-24 sm:px-8 sm:py-32 md:py-40"
       style={{ background: "var(--page-bg)" }}
     >
@@ -36,9 +36,9 @@ export function ContactSection() {
             className="hero-heading font-black uppercase text-center leading-[0.95] tracking-tight w-full"
             style={{ fontSize: "clamp(2.5rem, 9.5vw, 10rem)" }}
           >
-            Construyamos
+            Let's
             <br />
-            algo juntos.
+            connect!
           </h2>
         </FadeIn>
 
@@ -47,20 +47,19 @@ export function ContactSection() {
             className="mx-auto mt-8 max-w-2xl text-center text-base sm:text-lg md:text-xl"
             style={{ color: "var(--page-fg)", opacity: 0.6 }}
           >
-            ¿Tienes un proyecto en mente, una posición para mí, o simplemente quieres
-            conectar? Mi bandeja siempre está abierta — respondo en menos de 24 horas.
+            My inbox is always open. Whether you have a question or just want to say hi, I'll get back to you. Let's Connect!
           </p>
         </FadeIn>
 
         <FadeIn delay={0.3}>
           <div className="mt-10 flex justify-center sm:mt-12">
             <motion.a
-              href="mailto:javicastillo.tech@gmail.com"
+              href="mailto:vuongthevinh07@gmail.com"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="contact-cta group inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition-shadow hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] sm:gap-3 sm:px-8 sm:py-5 sm:text-lg"
             >
-              javicastillo.tech@gmail.com
+              vuongthevinh07@gmail.com
               <ArrowUpRight
                 className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 sm:h-5 sm:w-5"
                 strokeWidth={2}
@@ -107,8 +106,8 @@ export function ContactSection() {
           className="contact-footer mt-24 flex flex-col items-start justify-between gap-6 border-t pt-8 text-sm sm:flex-row sm:items-center"
           style={{ borderColor: "var(--hairline)", color: "var(--page-fg)", opacity: 0.5 }}
         >
-          <p>© {new Date().getFullYear()} Javier Castillo. Casi todos los derechos reservados.</p>
-          <p>Cartagena, Colombia</p>
+          <p>© {new Date().getFullYear()} The Vinh Vuong.</p>
+          <p>Montreal, Quebec, Canada.</p>
         </div>
       </div>
     </section>

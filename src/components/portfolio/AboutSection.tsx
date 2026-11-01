@@ -9,23 +9,37 @@ const DECOR = {
 };
 
 const TECH_STACK = [
-  { name: "React", slug: "react" },
-  { name: "Next.js", slug: "nextdotjs", class: "dark:invert" },
-  { name: "TypeScript", slug: "typescript" },
-  { name: "Python", slug: "python", isDevicon: true },
-  { name: "FastAPI", slug: "fastapi" },
-  { name: "Django", slug: "django", color: "44b78b" },
-  { name: "PostgreSQL", slug: "postgresql" },
-  { name: "AWS Lambda", slug: "awslambda" },
-  { name: "Serverless", slug: "serverless" },
+  // { name: "React", slug: "react" },
+  // { name: "Next.js", slug: "nextdotjs", class: "dark:invert" },
+  // { name: "TypeScript", slug: "typescript" },
+  // { name: "Python", slug: "python", isDevicon: true },
+  // { name: "FastAPI", slug: "fastapi" },
+  // { name: "Django", slug: "django", color: "44b78b" },
+  // { name: "PostgreSQL", slug: "postgresql" },
+  // { name: "AWS Lambda", slug: "awslambda" },
+  // { name: "Serverless", slug: "serverless" },
   { name: "REST APIs", slug: "postman" },
   { name: "Git", slug: "git" },
+  { name: "Docker", slug: "docker" },
+  { name: "PHP", slug: "php" },
+  { name: "Java", slug: "java", isDevicon: true },
+  { name: "C#", slug: "csharp", isDevicon: true },
+  { name: "HTML5", slug: "html5" },
+  { name: "CSS3", slug: "css" },
+  { name: "Bootstrap", slug: "bootstrap" },
+  { name: "JavaScript", slug: "javascript" },
+  { name: "Dart", slug: "dart" },
+  { name: "Flutter", slug: "flutter" },
+  { name: "MySQL", slug: "mysql" },
+  { name: "SQLite", slug: "sqlite" },
+  { name: "MariaDB", slug: "mariadb" },
+
 ];
 
 export function AboutSection() {
   return (
     <section
-      id="sobre-mi"
+      id="about-me"
       className="relative min-h-screen flex items-center justify-center px-5 sm:px-8 md:px-10 py-20 overflow-hidden"
     >
       <FadeIn
@@ -73,13 +87,13 @@ export function AboutSection() {
           className="hero-heading font-black uppercase leading-none tracking-tight text-center"
           style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
         >
-          Sobre mí
+          About Me
         </FadeIn>
 
         <div className="flex flex-col items-center gap-10 sm:gap-14">
           <AnimatedText
-            text="Tecnólogo en Sistemas de Información con experiencia en desarrollo full stack e infraestructura cloud. He trabajado en el ciclo completo de soluciones digitales: desde APIs REST y aplicaciones web con React y Next.js, hasta arquitecturas serverless en AWS y digitalización de procesos operativos. Me adapto con facilidad entre roles de desarrollo y sistemas, siempre con foco en resolver problemas reales con tecnología, automatización y buenas prácticas."
-            className="font-medium text-center leading-relaxed max-w-[600px]"
+          text="Full-time student in Computer Science & Technology at Vanier College. I am "
+          className="font-medium text-center leading-relaxed max-w-[600px]"
             style={{ color: "var(--page-fg)", fontSize: "clamp(0.9rem, 1.6vw, 1.25rem)" }}
           />
 
@@ -98,7 +112,7 @@ export function AboutSection() {
                   <img
                     src={
                       tech.isDevicon
-                        ? "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        ? `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.slug}/${tech.slug}-original.svg`
                         : tech.slug === "django"
                         ? "https://cdn.simpleicons.org/django/44b78b"
                         : `https://cdn.simpleicons.org/${tech.slug}`
@@ -117,7 +131,7 @@ export function AboutSection() {
 
           <FadeIn delay={0.5} y={10}>
             <a
-              href="#contacto"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full px-8 py-3 md:px-10 md:py-3.5 text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 hover:opacity-80"
               style={{
                 border: "1px solid var(--hairline)",
@@ -125,7 +139,7 @@ export function AboutSection() {
                 background: "transparent",
               }}
             >
-              Hablemos
+              Let's connect!
             </a>
           </FadeIn>
         </div>

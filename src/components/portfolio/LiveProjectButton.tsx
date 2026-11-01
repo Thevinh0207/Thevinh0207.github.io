@@ -12,8 +12,8 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
   
   const children = (
     <>
-      <span className="hidden sm:inline">Ver proyecto</span>
-      <span className="sm:hidden">Ver</span>
+      <span className="hidden sm:inline">View project</span>
+      <span className="sm:hidden">View</span>
       {isBlocked ? (
         <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-80" />
       ) : (
@@ -42,7 +42,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
             backdropFilter: "blur(4px)"
           }}
         >
-          En desarrollo / Próximamente
+          In development / Coming soon
         </span>
       </div>
     );
@@ -54,7 +54,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
         href={url}
         target="_blank"
         rel="noreferrer"
-        aria-label="Ver proyecto en vivo"
+        aria-label="View live project"
         className={className}
         style={style}
       >
@@ -66,7 +66,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
   return (
     <button
       type="button"
-      aria-label="Ver proyecto en vivo"
+      aria-label="View live project"
       className={className}
       style={style}
     >

@@ -30,3 +30,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code — local-only session state
+.claude/worktrees/
+.claude/settings.local.json
+.claude/sessions/
+.claude/cache/

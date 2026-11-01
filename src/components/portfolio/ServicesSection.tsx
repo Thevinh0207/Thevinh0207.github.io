@@ -31,7 +31,7 @@ const SERVICES = [
 export function ServicesSection() {
   return (
     <section
-      id="servicios"
+      id="services"
       className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-0"
       style={{ background: "var(--page-bg-invert)" }}
     >

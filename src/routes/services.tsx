@@ -4,16 +4,16 @@ import { ServicesSection } from "@/components/portfolio/ServicesSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
 
-export const Route = createFileRoute("/servicios")({
+export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Servicios — Javier Castillo" },
+      { title: "Services — The Vinh Vuong" },
       {
         name: "description",
         content:
-          "Servicios de desarrollo de software ofrecidos por Javier Castillo: desarrollo frontend, backend, DevOps, optimización de rendimiento y consultoría técnica.",
+          "TODO.",
       },
-      { property: "og:title", content: "Servicios — Javier Castillo" },
+      { property: "og:title", content: "Services — The Vinh Vuong" },
     ],
   }),
   component: ServiciosPage,

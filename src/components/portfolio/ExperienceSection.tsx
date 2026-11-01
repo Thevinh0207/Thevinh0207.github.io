@@ -2,45 +2,12 @@ import { FadeIn } from "./FadeIn";
 
 const EXPERIENCE = [
   {
-    role: "Co-fundador & Desarrollador Full Stack",
-    company: "HeyFood",
-    period: "Desde Sep. 2025",
-    location: "Cartagena, Colombia",
+    role: "No Experience Yet :(",
+    // company: "HeyFood",
+    // period: "Desde Sep. 2025",
+    // location: "Cartagena, Colombia",
     bullets: [
-      "Co-diseñé y desarrollé una plataforma SaaS para gestión de restaurantes, pedidos y operaciones logísticas.",
-      "Implementé geolocalización y seguimiento en tiempo real integrando APIs de mapas.",
-      "Arquitecté el sistema completo con Next.js, TypeScript y PostgreSQL, manejando flujos de datos concurrentes en tiempo real.",
-    ],
-  },
-  {
-    role: "Cloud Engineer & Full Stack Developer",
-    company: "Operations Maritime Fluvial Integral S.A.S.",
-    period: "Jul. 2025 – Abr. 2026",
-    location: "Cartagena, Colombia",
-    bullets: [
-      "Diseñé e implementé arquitectura serverless en AWS (Lambda, API Gateway, Serverless Framework) para APIs REST escalables.",
-      "Desarrollé herramientas backend en Python para la digitalización de procesos operativos críticos.",
-      "Diseñé una PWA offline-first con React, TypeScript y Dexie.js para captura de datos en zonas sin conectividad.",
-    ],
-  },
-  {
-    role: "Desarrollador Full Stack (Prácticas)",
-    company: "Ingeniería Sistemas y Servicios E.U.",
-    period: "Ene. 2025 – Jun. 2025",
-    location: "Cartagena, Colombia",
-    bullets: [
-      "Desarrollé aplicaciones web full stack con Python, Django, React y MySQL para automatización de procesos internos.",
-      "Optimicé consultas SQL y estructuras relacionales en MySQL, logrando mejoras del 40% en tiempos de respuesta.",
-    ],
-  },
-  {
-    role: "Desarrollador y Consultor TI",
-    company: "Freelance",
-    period: "Jun. 2023 – Dic. 2024",
-    location: "Cartagena, Colombia",
-    bullets: [
-      "Desarrollé soluciones de software a medida para automatización de inventarios y gestión operativa de pequeñas empresas.",
-      "Implementé soluciones web con Next.js y Astro, optimizadas para SEO y rendimiento, incluyendo despliegue y configuración de infraestructura.",
+      "Actively Looking for an internship or entry-level position in Web Development/Software development.",
     ],
   },
 ];
@@ -48,7 +15,7 @@ const EXPERIENCE = [
 export function ExperienceSection() {
   return (
     <section
-      id="experiencia"
+      id="experience"
       className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-0 mx-2 sm:mx-4 md:mx-6 mt-10 mb-0"
       style={{ background: "var(--page-bg-invert)" }}
     >
@@ -58,7 +25,7 @@ export function ExperienceSection() {
             className="font-black uppercase tracking-tight leading-none text-center mb-16 sm:mb-20 md:mb-28"
             style={{ color: "var(--page-fg-invert)", fontSize: "clamp(3rem, 12vw, 160px)" }}
           >
-            Experiencia
+            Experience
           </h2>
         </FadeIn>
 
@@ -109,7 +76,7 @@ export function ExperienceSection() {
                     className="block sm:inline font-normal mt-1 sm:mt-0 sm:ml-2 normal-case tracking-normal font-sans"
                     style={{ opacity: 0.6, fontSize: "clamp(0.9rem, 1.5vw, 1.4rem)" }}
                   >
-                    en {exp.company}
+                     {exp.company}
                   </span>
                 </h3>
 

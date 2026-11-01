@@ -4,11 +4,11 @@ import { FadeIn } from "./FadeIn";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { label: "SOBRE MÍ", href: "#sobre-mi" },
-  { label: "EXPERIENCIA", href: "#experiencia" },
-  { label: "PROYECTOS", href: "#proyectos" },
-  { label: "SERVICIOS", href: "/servicios", isRoute: true },
-  { label: "CONTACTO", href: "#contacto" },
+  { label: "About me", href: "#about-me" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Services", href: "/services", isRoute: true },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function HeroSection() {
@@ -45,7 +45,7 @@ export function HeroSection() {
               className="font-black tracking-widest text-sm md:text-base"
               style={{ color: "var(--page-fg)", letterSpacing: "0.18em" }}
             >
-              Javier
+              The Vinh
             </a>
           </FadeIn>
 
@@ -121,7 +121,7 @@ export function HeroSection() {
               className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap"
               style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
             >
-              Soy Javier
+              The Vinh Vuong
             </h1>
             <p
               className="font-light leading-relaxed mt-6 mx-auto max-w-[600px] text-center"
@@ -131,7 +131,7 @@ export function HeroSection() {
                 opacity: 0.65,
               }}
             >
-              Desarrollador full stack especializado en ecosistemas modernos (React, Next.js, Python) e integración de Inteligencia Artificial. Construyo productos digitales limpios, escalables e inteligentes — desde el frontend hasta la nube.
+              Full-time student in Computer Science & Technology, looking for an intership for Winter 2026 and Summer 2026 or an entry job for web-development.
             </p>
           </FadeIn>
 
@@ -142,8 +142,8 @@ export function HeroSection() {
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <a
-              id="btn-descargar-cv"
-              href="/cv.pdf"
+              id="btn-download-cv"
+              href="/The vinh resume - Latex.pdf"
               download
               className="inline-flex items-center gap-2 rounded-full px-8 py-3 md:px-10 md:py-3.5 text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 hover:opacity-90 hover:scale-[1.03]"
               style={{
@@ -170,12 +170,12 @@ export function HeroSection() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Descargar CV
+              Download CV
             </a>
 
             <a
-              id="btn-contacto-hero"
-              href="#contacto"
+              id="btn-contact-hero"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full px-8 py-3 md:px-10 md:py-3.5 text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 hover:opacity-80"
               style={{
                 border: "1px solid var(--hairline)",
@@ -183,7 +183,7 @@ export function HeroSection() {
                 background: "transparent",
               }}
             >
-              Contáctame
+              Contact me
             </a>
           </FadeIn>
         </div>

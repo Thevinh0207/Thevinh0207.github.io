@@ -9,17 +9,17 @@ import { ContactSection } from "@/components/portfolio/ContactSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Javier Castillo — Desarrollador Full Stack" },
+      { title: "The Vinh Vuong - Computer Science Student" },
       {
         name: "description",
         content:
-          "Javier Castillo es un desarrollador full stack con experiencia en React, Next.js, Python y AWS — construyendo productos digitales limpios, escalables e inolvidables desde Cartagena, Colombia.",
+          "TODO.",
       },
-      { property: "og:title", content: "Javier Castillo — Desarrollador Full Stack" },
+      { property: "og:title", content: "The Vinh Vuong — Computer Science Student" },
       {
         property: "og:description",
         content:
-          "Portfolio de Javier Castillo, desarrollador full stack enfocado en ingeniería frontend, arquitectura cloud y sistemas.",
+          "The Vinh's Portfolio.",
       },
     ],
   }),

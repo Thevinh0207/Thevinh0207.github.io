@@ -131,7 +131,7 @@ export function ProjectsSection() {
   });
   return (
     <section
-      id="proyectos"
+      id="projects"
       ref={ref}
       className="relative z-10 px-5 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-32 pb-20"
       style={{ background: "var(--page-bg)" }}
@@ -140,7 +140,7 @@ export function ProjectsSection() {
         className="hero-heading font-black uppercase tracking-tight leading-none text-center mb-16 sm:mb-20 md:mb-28"
         style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
       >
-        Proyectos
+        Projects
       </h2>
 
       <div>
@@ -272,7 +272,7 @@ function ProjectCard({ project, index, progress, range, targetScale }: ProjectCa
                           : `https://cdn.simpleicons.org/${tech.slug}`
                       }
                       alt={tech.name}
-                      className={`w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain ${tech.class || ""}`}
+                      className={`w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain ${"class" in tech ? tech.class || "" : ""}`}
                       loading="lazy"
                     />
                     <span
