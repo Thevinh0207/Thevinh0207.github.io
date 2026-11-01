@@ -145,16 +145,7 @@ export function HeroSection() {
               id="btn-download-cv"
               href="/The vinh resume - Latex.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full px-8 py-3 md:px-10 md:py-3.5 text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 hover:opacity-90 hover:scale-[1.03]"
-              style={{
-                background:
-                  "linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)",
-                boxShadow:
-                  "0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset",
-                outline: "2px solid #ffffff",
-                outlineOffset: "-3px",
-                color: "#fff",
-              }}
+              className="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-3 md:px-10 md:py-3.5 text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-[1.03]"
             >
               <svg
                 width="15"

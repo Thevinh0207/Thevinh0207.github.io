@@ -6,7 +6,7 @@ import { FadeIn } from "./FadeIn";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mbgdyqyg";
 
 const NAME_PATTERN = /^[\p{L}\s'’\-.]+$/u;
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_PATTERN = /^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
 
 const socials = [
   {
@@ -254,6 +254,7 @@ export function ContactSection() {
                 whileHover={{ scale: status === "idle" || status === "error" ? 1.02 : 1 }}
                 whileTap={{ scale: status === "idle" || status === "error" ? 0.98 : 1 }}
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition-shadow hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
+
               >
                 {status === "submitting" && (
                   <>
@@ -289,7 +290,7 @@ export function ContactSection() {
                   className="inline-flex items-center gap-2 text-sm"
                   style={{ color: "var(--page-fg)", opacity: 0.7 }}
                 >
-                  Thanks — I'll get back to you soon.
+                  Thanks, i'll get back to you soon!
                 </span>
               )}
             </div>
