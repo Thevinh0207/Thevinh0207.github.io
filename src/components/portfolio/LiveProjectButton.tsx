@@ -54,7 +54,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
         href={url}
         target="_blank"
         rel="noreferrer"
-        aria-label="View live project"
+        aria-label="View project repository"
         className={className}
         style={style}
       >
@@ -66,7 +66,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
   return (
     <button
       type="button"
-      aria-label="View live project"
+      aria-label="Coming soon / In development"
       className={className}
       style={style}
     >

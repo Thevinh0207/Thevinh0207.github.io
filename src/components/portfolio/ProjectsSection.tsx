@@ -2,125 +2,51 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { Star } from "lucide-react";
 import { LiveProjectButton } from "./LiveProjectButton";
-import heyfood from "@/assets/heyfood/heyfood-1.png";
-import fotopdf from "@/assets/fotopdf/fotopdf-1.png";
-import cvAdapter from "@/assets/cv-adapter/cv-adapter-1.png";
-import genome from "@/assets/genome/genome-1.png";
-import checkMyFood from "@/assets/check-my-food/check-my-food-1.png";
-import devUtils from "@/assets/dev-utils/dev-utils-1.png";
+import  mariHacks from "@/assets/projects/mariehacks-demo.png";
+import defaultProject from "@/assets/projects/default-project.jpg";
 
 const PROJECTS = [
   {
     num: "01",
-    category: "Cliente",
-    name: "HeyFood",
+    category: "Personal Project",
+    name: "AI Study Assistant",
     highlighted: true,
-    desc: "Plataforma SaaS integral para gestión de restaurantes, pedidos y domicilios, construida siguiendo Clean Architecture.",
+    desc: "A gamified AI study companion that turns any topic, plus optional notes, PDFs, or slides into AI-generated study notes, flashcards, quizzes, and a personalized study plan, with a plant pet that grows as you study.",    
     bullets: [
-      "Plataforma en producción validada por clientes reales activos que automatizan su facturación, operación y logística diaria.",
-      "Arquitectura multi-tenant segura con aislamiento de datos por restaurante y dashboards optimizados para 6 roles distintos.",
-      "Gestión de pedidos en tiempo real con notificaciones visuales y sonoras por rol, garantizando operaciones fluidas.",
-      "Módulo de operaciones integral con tracking GPS para domicilios y flujos automatizados de comunicación con el cliente.",
+      "End-to-end AI pipeline powered by Groq LLMs for notes, 1–30 flashcards, 1–20 quiz questions, and day-by-day study plans, with Tavily web research and PDF/PPTX/MD ingestion.",
+      "Gamification layer with a coin economy, four upgrade tracks, and a plant pet whose XP and health react to study time and quiz accuracy unlocking seven tier skins from Bad to Legendary.",
+      "Full Spotify Connect integration: OAuth login, encrypted token storage, device discovery and transfer, playlist/track search, and in-browser playback via the Web Playback SDK.",
+      "Hardened FastAPI backend with JWT auth, bcrypt hashing, SlowAPI rate limits, upload magic-byte checks, Fernet-encrypted OAuth tokens, and pytest coverage against a stubbed AI stack."
     ],
     stack: [
-      { name: "Next.js", slug: "nextdotjs", class: "dark:invert" },
-      { name: "Tailwind CSS", slug: "tailwindcss" },
-      { name: "PostgreSQL", slug: "postgresql" }
+      { name: "Python", slug: "python" },
+      { name: "FastAPI", slug: "fastapi" },
+      { name: "HTML5", slug: "html5" },
+      { name: "CSS3", slug: "css3" },
+      { name: "JavaScript", slug: "javascript" },
+      { name: "SQLite", slug: "sqlite" },
+      { name: "Spotify", slug: "spotify" },
+      { name: "JWT", slug: "jsonwebtokens" },
+      { name: "GroqAPI", slug: "postman" },
+      { name: "Tavily", slug: "postman" }
     ],
-    image: heyfood,
-    url: "https://www.heyfood-app.com",
+    image: mariHacks,
+    url: "https://github.com/gvogas/hacks",
   },
   {
     num: "02",
-    category: "Personal",
-    name: "CV Adapter AI",
-    desc: "Adaptador de currículum inteligente impulsado por IA que adapta automáticamente tu perfil profesional a descripciones de vacantes en tiempo real.",
+    category: "",
+    name: "",
+    desc: "",
     bullets: [
-      "Integración con 7 proveedores de IA (OpenAI, Anthropic, Gemini, Mistral, DeepSeek, Groq, xAI) para optimizaciones de CV altamente personalizadas.",
-      "Interfaz interactiva con edición en vivo y descarga inmediata en formatos profesionales DOCX y PDF.",
-      "Diseño enfocado en privacidad local: tus claves de API permanecen 100% seguras en tu navegador sin intermediación de servidores externos."
+      
     ],
     stack: [
-      { name: "React", slug: "react" },
-      { name: "TypeScript", slug: "typescript" },
-      { name: "Gemini", slug: "googlegemini" }
+
     ],
-    image: cvAdapter,
-    url: "https://github.com/JavierDvlpr/cv-adapter-ai",
-  },
-  {
-    num: "03",
-    category: "Personal",
-    name: "FotoPDF",
-    desc: "Escáner de documentos 100% en el navegador, libre de servidores, registros o instalaciones, diseñado con Arquitectura Hexagonal.",
-    bullets: [
-      "Procesamiento local mediante OpenCV.js (WebAssembly) para detección automática de bordes de papel en tiempo real a +30 FPS.",
-      "Filtros de imagen avanzados (B&N adaptativo y Unsharp Masking) para limpiar sombras y realzar texto directamente en el cliente.",
-      "Generación de PDFs optimizados y ligeros integrando pdf-lib en formatos A4, Carta o Auto con compresión configurable."
-    ],
-    stack: [
-      { name: "React", slug: "react" },
-      { name: "Tailwind CSS", slug: "tailwindcss" },
-      { name: "TypeScript", slug: "typescript" },
-      { name: "OpenCV", slug: "opencv" }
-    ],
-    image: fotopdf,
-    url: "https://fotopdf.vercel.app",
-  },
-  {
-    num: "04",
-    category: "Personal (En Desarrollo)",
-    name: "Genome",
-    desc: "Herramienta de línea de comandos para optimizar tokens en agentes de IA, mapeando repositorios en un grafo de conocimiento.",
-    bullets: [
-      "Estructura el grafo jerárquicamente como una doble hélice de ADN, reduciendo el consumo de tokens de contexto hasta 4,700x por consulta.",
-      "Análisis estático de código mediante tree-sitter para más de 25 lenguajes e integración MCP nativa para Claude Code, Cursor y Copilot.",
-      "Visualización interactiva 3D autónoma sin dependencias de servidor para explorar y filtrar la arquitectura del proyecto desde el navegador."
-    ],
-    stack: [
-      { name: "Python", slug: "python" },
-      { name: "OpenAI", slug: "openai" },
-      { name: "Anthropic", slug: "anthropic" }
-    ],
-    image: genome,
-    isBlocked: true,
-  },
-  {
-    num: "05",
-    category: "Cliente (En Desarrollo)",
-    name: "Check My Food",
-    desc: "Aplicación móvil para decisiones alimenticias personalizadas mediante escaneo de código de barras y análisis de idoneidad en base a perfiles de salud.",
-    bullets: [
-      "Escaneo de código de barras e integración directa con Open Food Facts API para análisis nutricional en tiempo real.",
-      "Motor de reglas personalizado y procesamiento por IA (OpenAI + Edge Functions) para generar explicaciones personalizadas en lenguaje natural.",
-      "Arquitectura de seguridad Zero-Knowledge con cifrado AES-256 en base de datos local y seguridad a nivel de fila (RLS) en Supabase."
-    ],
-    stack: [
-      { name: "Flutter", slug: "flutter" },
-      { name: "Supabase", slug: "supabase" },
-      { name: "OpenAI", slug: "openai" }
-    ],
-    image: checkMyFood,
-    isBlocked: true,
-  },
-  {
-    num: "06",
-    category: "Personal",
-    name: "DevUtils",
-    desc: "Colección de herramientas de línea de comandos y scripts de utilidad para automatizar flujos de trabajo diarios de desarrollo y optimizar la productividad.",
-    bullets: [
-      "Automatización de tareas recurrentes, formateo de datos y generación de código boilerplate mediante scripts rápidos y portables.",
-      "Utilidades ligeras para desarrollo local diseñadas para integrarse de forma fluida en cualquier emulador de terminal.",
-      "Código modular y de código abierto estructurado para ser fácilmente extensible y adaptable a múltiples plataformas."
-    ],
-    stack: [
-      { name: "Node.js", slug: "nodedotjs" },
-      { name: "Python", slug: "python" },
-      { name: "GNU Bash", slug: "gnubash" }
-    ],
-    image: devUtils,
-    url: "https://github.com/JavierDvlpr/dev-utils",
-  },
+    image: null,
+    url: ""
+  }
 ];
 
 export function ProjectsSection() {
@@ -289,14 +215,12 @@ function ProjectCard({ project, index, progress, range, targetScale }: ProjectCa
 
           {/* Image — col-span-3 on md */}
           <div className="md:col-span-3 flex-shrink-0 h-[180px] sm:h-[220px] md:h-auto min-h-0 mt-2 md:mt-0">
-            {project.image && (
-              <img
-                src={project.image}
-                alt={project.name}
-                loading="lazy"
-                className="w-full h-full min-h-[200px] object-cover rounded-[24px] sm:rounded-[40px] md:rounded-[60px]"
-              />
-            )}
+            <img
+              src={project.image || defaultProject}
+              alt={project.name}
+              loading="lazy"
+              className="w-full h-full min-h-[200px] object-cover rounded-[24px] sm:rounded-[40px] md:rounded-[60px]"
+            />
           </div>
         </div>
       </motion.div>

@@ -12,7 +12,7 @@ const socials = [
   {
     label: "LinkedIn",
     value: "in/thevinhvuong",
-    href: "https://linkedin.com/in/thevinhvuong",
+    href: "https://www.linkedin.com/in/the-vinh-vuong-6a54533a7/",
     Icon: Linkedin,
   },
   // {
