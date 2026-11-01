@@ -26,7 +26,7 @@ const PROJECTS = [
       { name: "Python", slug: "python" },
       { name: "FastAPI", slug: "fastapi" },
       { name: "HTML5", slug: "html5" },
-      { name: "CSS3", slug: "css3" },
+      { name: "CSS3", slug: "css"},
       { name: "JavaScript", slug: "javascript" },
       { name: "SQLite", slug: "sqlite" },
       { name: "Spotify", slug: "spotify" },
@@ -49,7 +49,9 @@ const PROJECTS = [
       "Integration with furniture databases for accurate representation of furniture items.",
       "User-friendly interface for easy navigation and manipulation of room designs."
     ],
-    stack: [],
+    stack: [
+
+    ],
     image: null,
     isBlocked: true,
   },
@@ -96,13 +98,24 @@ const PROJECTS = [
     image: null,
     isBlocked: true,
   },
-  {
+    {
     num: "05",
     category: "School Group Project",
-    name: "Client Website/School Group Project",
-    desc: "",
-    bullets: [],
-    stack: [],
+    name: "Studio Doki — Nail Salon",
+    desc: "A full-stack web application for a Montreal nail salon where guests and members can browse services, book appointments, pay a $20 deposit, and leave reviews after their visit, with a full admin dashboard behind role-guarded routes.",
+    bullets: [
+      "6-step guest flow / 4-step member flow for booking: service pick, server-side slot availability, deposit payment, and atomic appointment-plus-payment write so neither half can orphan.",
+      "Full admin panel with CRUD for appointments, services, service categories, payments, reviews, FAQ, and About-page content — every destructive action behind a custom confirmation modal.",
+      "Session-based auth with bcrypt hashing, three-tier role model (guest / client / admin), auto-promotion via a config allowlist, and a DB-level `role IN ('admin','client')` check constraint for defense in depth.",
+      "7-table MariaDB schema with historical contact snapshots on appointments and payments so records stay accurate even after a user updates their email or phone; UNIQUE enforcement on reviews so each appointment gets at most one.",
+    ],
+    stack: [
+      { name: "PHP", slug: "php" },
+      { name: "Slim Framework", slug: "slim", icon: slimIcon },
+      { name: "Twig", slug: "twig" },
+      { name: "MariaDB", slug: "mariadb" },
+      { name: "Composer", slug: "composer" },
+    ],
     image: nailSalon,
     url: "https://github.com/Thevinh0207/SYSTEM-DEVELOPTMENT.git",
   },
@@ -125,26 +138,26 @@ const PROJECTS = [
     image: null,
     isBlocked: true,
   },
-  {
+    {
     num: "07",
     category: "School Group Project",
-    name: "E-commerce Website - PetConnect",
-    desc:"",
-    bullets: [],
-    stack: [],
+    name: "PetConnect — Pet Adoption",
+    desc: "A full-featured pet adoption web platform where visitors browse adoptable pets by category and advanced filters, registered users submit and track adoption requests, and admins manage pets, users, and requests from a dedicated dashboard.",
+    bullets: [
+      "Guest browsing with category tabs (Dog / Cat / Bird / Rabbit), advanced filters (breed, age, size, location), live AJAX search, and dedicated pet-detail pages with adoption CTAs.",
+      "Hardened auth flow: registration, bcrypt password hashing, email-based 2FA (6-digit code, 3-attempt lockout, 5-min expiry), hashed one-time password-reset codes, and timing-safe comparisons on every code check.",
+      "Rich profile center with avatar uploads (image-type whitelist, 5 MB cap, randomized filenames), theme / language / notification preferences, adoption history, and self-serve account deletion with confirmation modal.",
+      "Site-wide middleware stack: security headers (X-Frame-Options, CSP, Permissions-Policy), maintenance-mode toggle, custom 404, role-guarded admin routes, and session regeneration on authentication.",
+    ],
+    stack: [
+      { name: "PHP", slug: "php" },
+      { name: "Slim Framework", slug: "slim", icon: slimIcon },
+      { name: "SQLite", slug: "sqlite" },
+      { name: "Composer", slug: "composer" },
+    ],
     image: petConnect,
     url: "https://github.com/OliverDAvino/eCommerceProject.git",
   },
-  {
-    num: "08",
-    category: "School Group Project",
-    name: "Customized Blackjack Game",
-    desc: "",
-    bullets: [],
-    stack: [],
-    image: null,
-    isPrivate: true,
-  }
 ];
 
 export function ProjectsSection() {
