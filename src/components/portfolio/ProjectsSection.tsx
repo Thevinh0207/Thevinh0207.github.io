@@ -35,11 +35,11 @@ const PROJECTS = [
   },
   {
     num: "02",
-    category: "",
-    name: "",
-    desc: "",
+    category: "School Project",
+    name: "Finance Tracker",
+    desc: "An application that allows users to track their expenses and income, categorize transactions, and visualize their financial data through charts and graphs.",
     bullets: [
-      
+      "Implemented user authentication and .",
     ],
     stack: [
 

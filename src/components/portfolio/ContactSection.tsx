@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, MessageCircle, ArrowUpRight, Send, Loader2, Che
 import { FadeIn } from "./FadeIn";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mbgdyqyg";
-
+const FORM_SUBJECT = "New message from personal Website";
 const NAME_PATTERN = /^[\p{L}\s'’\-.]+$/u;
 const EMAIL_PATTERN = /^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
 
@@ -98,7 +98,7 @@ export function ContactSection() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim() }),
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), message: message.trim(), _subject: FORM_SUBJECT,  _replyto: email.trim(), }),
       });
 
       if (res.ok) {

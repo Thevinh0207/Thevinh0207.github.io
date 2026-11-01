@@ -20,7 +20,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const navItems = [
-  { label: "START", href: "/" },
+  { label: "HOME", href: "/" },
   { label: "ABOUT ME", href: "/#sobre-mi" },
   { label: "EXPERIENCE", href: "/#experiencia" },
   { label: "PROJECTS", href: "/#proyectos" },
