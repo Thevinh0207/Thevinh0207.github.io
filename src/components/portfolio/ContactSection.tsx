@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, ArrowUpRight, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 
-const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT ?? "";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mbgdyqyg";
 const FORM_SUBJECT = "New message from personal Website";
 const NAME_PATTERN = /^[\p{L}\s'’\-.]+$/u;
 const EMAIL_PATTERN = /^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/;
