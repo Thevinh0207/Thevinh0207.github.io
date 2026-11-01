@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { ServicesSection } from "@/components/portfolio/ServicesSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
+import { ScrollProgressBar } from "@/components/portfolio/ScrollProgressBar";
+import { FooterSection } from "@/components/portfolio/FooterSection";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -16,18 +18,18 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services — The Vinh Vuong" },
     ],
   }),
-  component: ServiciosPage,
+  component: ServicesPage,
 });
 
 const navItems = [
   { label: "HOME", href: "/" },
-  { label: "ABOUT ME", href: "/#sobre-mi" },
-  { label: "EXPERIENCE", href: "/#experiencia" },
-  { label: "PROJECTS", href: "/#proyectos" },
-  { label: "CONTACT", href: "#contacto" },
+  { label: "ABOUT ME", href: "/#about" },
+  { label: "EXPERIENCE", href: "/#experience" },
+  { label: "PROJECTS", href: "/#projects" },
+  { label: "CONTACT", href: "/#contact" },
 ];
 
-function ServiciosPage() {
+function ServicesPage() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -77,6 +79,7 @@ function ServiciosPage() {
 
           <ThemeToggle />
         </div>
+        <ScrollProgressBar />
       </nav>
 
       {/* Page spacer */}
@@ -87,6 +90,8 @@ function ServiciosPage() {
 
       {/* Contact + footer */}
       <ContactSection />
+
+      <FooterSection />
     </main>
   );
 }

@@ -15,6 +15,7 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
+.npmrc
 
 # Wrangler / Cloudflare
 .wrangler/
@@ -36,3 +37,6 @@ dist-ssr
 .claude/settings.local.json
 .claude/sessions/
 .claude/cache/
+
+#env
+.env

@@ -7,6 +7,7 @@ import flutterFinanceTracker from "@/assets/projects/financetracker-demo.png";
 import petConnect from "@/assets/projects/petconnect-demo.png";
 import nailSalon from "@/assets/projects/nailsalon-demo.png";
 import defaultProject from "@/assets/projects/default-project.jpg";
+import slimIcon from "@/assets/techIcons/slim.svg";
 
 const PROJECTS = [
   {
@@ -78,9 +79,20 @@ const PROJECTS = [
     category: "School Group Project",
     highlighted: true,
     name: "Fossil API",
-    desc: "",
-    bullets: [],
-    stack: [],
+    desc: "This is team-based Project where we developed a RESTful API built with PHP slim 4 framework and MariaDB database. It provides endpoints for managing fossil data, including creating, reading, updating, and deleting fossil records. The API is designed to be lightweight and efficient, making it suitable for integration with various applications.",
+    bullets: [
+      "Developed a RESTful API using PHP slim 4 framework for managing fossil data.",
+      "Implemented CRUD operations for fossil records, allowing users to create, read, update, and delete fossil data.",
+      "Utilized MariaDB as the database backend for efficient data storage and retrieval.",
+      "Designed the API to be lightweight and efficient, ensuring fast response times and scalability.",
+      "Provided clear documentation for API endpoints, request/response formats, and authentication methods.",
+    ],
+    stack: [
+      { name: "PHP", slug: "php" },
+      { name: "Slim Framework", slug: "slim", icon: slimIcon },
+      { name: "MariaDB", slug: "mariadb" },
+      { name: "RESTful API", slug: "postman" },
+    ],
     image: null,
     isBlocked: true,
   },
@@ -276,7 +288,9 @@ function ProjectCard({ project, index, progress, range, targetScale }: ProjectCa
                   >
                     <img
                       src={
-                        tech.slug === "python"
+                          (tech as { icon?: string }).icon
+                          ? (tech as { icon?: string }).icon!
+                          : tech.slug === "python"
                           ? "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                           : tech.slug === "openai"
                           ? "https://cdn.simpleicons.org/openai/19c9a9"
