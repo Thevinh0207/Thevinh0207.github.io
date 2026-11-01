@@ -180,7 +180,7 @@ export function ProjectsSection() {
         Projects
       </h2>
 
-      <div className="pb-[20vh]">
+      <div>
                 {PROJECTS.map((p, i) => {
           // const targetScale = Math.max(0.92, 1 - (PROJECTS.length - 1 - i) * 0.02);
           const targetScale = 1;
