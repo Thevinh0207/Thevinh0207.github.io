@@ -2,7 +2,10 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { Star } from "lucide-react";
 import { LiveProjectButton } from "./LiveProjectButton";
-import  mariHacks from "@/assets/projects/mariehacks-demo.png";
+import mariHacks from "@/assets/projects/mariehacks-demo.png";
+import flutterFinanceTracker from "@/assets/projects/financetracker-demo.png";
+import petConnect from "@/assets/projects/petconnect-demo.png";
+import nailSalon from "@/assets/projects/nailsalon-demo.png";
 import defaultProject from "@/assets/projects/default-project.jpg";
 
 const PROJECTS = [
@@ -35,17 +38,100 @@ const PROJECTS = [
   },
   {
     num: "02",
-    category: "School Project",
-    name: "Finance Tracker",
-    desc: "An application that allows users to track their expenses and income, categorize transactions, and visualize their financial data through charts and graphs.",
+    category: "Personal Project",
+    highlighted: true,
+    name: "AI Room Planner Assistant",
+    desc: "An AI-powered room planner that generates 3D room layouts and furniture arrangements based on user input, allowing users to visualize and customize their living spaces in a virtual environment.",
     bullets: [
-      "Implemented user authentication and .",
+      "AI-driven room layout generation using natural language processing and computer vision techniques.",
+      "Interactive 3D visualization of room layouts with real-time customization options.",
+      "Integration with furniture databases for accurate representation of furniture items.",
+      "User-friendly interface for easy navigation and manipulation of room designs."
+    ],
+    stack: [],
+    image: null,
+    isBlocked: true,
+  },
+  {
+    num: "03",
+    category: "School Group Project",
+    highlighted: true,
+    name: "JATV Finance Tracker",
+    desc: "A cross-platform personal finance tracker built with Flutter and Firebase, combining transaction logging, goal-based savings, category budgets, and family-shared expenses behind a single themable, multilingual interface.",
+    bullets: [
+      "Full transaction suite with income, expense, and transfer types, per-user auto-generated categories, rich filter and sort sheets, date-range presets, and pull-to-refresh history search.",
+      "Goals and budgets system with weekly/monthly/yearly budget tracking, savings goals that auto-create audit-trail transfer transactions, and insight messages projecting when each goal will complete.",
+      "Family plan feature with shared household budgets, per-member allocations, email-based invites, admin roles, and shared-expense logging with per-person splits.",
+      "Shipped with full dark mode, 7 interface languages, Firebase email verification and password-reset flows, and a clean MVVM architecture separating Views, ViewModels, Repositories, and Models.",
     ],
     stack: [
-
+      { name: "Flutter", slug: "flutter" },
+      { name: "Dart", slug: "dart" },
+      { name: "Firebase", slug: "firebase" },
+      { name: "Material Design", slug: "materialdesign" },
+    ],
+    image: flutterFinanceTracker,
+    url: "https://github.com/Thevinh0207/finance-tracker-App-dev-2",
+  },
+  {
+    num: "04",
+    category: "School Group Project",
+    highlighted: true,
+    name: "Fossil API",
+    desc: "",
+    bullets: [],
+    stack: [],
+    image: null,
+    isBlocked: true,
+  },
+  {
+    num: "05",
+    category: "School Group Project",
+    name: "Client Website/School Group Project",
+    desc: "",
+    bullets: [],
+    stack: [],
+    image: nailSalon,
+    url: "https://github.com/Thevinh0207/SYSTEM-DEVELOPTMENT.git",
+  },
+  {
+    num: "06",
+    category: "School Group Project",
+    name: "3D Game: Squeeze benz",
+    desc: "A 3D game built with Unity and C# where players control a car to goes through the traffic without hitting other cars. The game features an infinite runner mode, a scoring system, virtual currency, upgradable cars, and a simple UI for navigation and settings.",
+    bullets: [
+      "Unity 3D game development with C# scripting, physics, and collision detection.",
+      "Infinite runner mode with procedurally generated traffic and obstacles.",
+      "Scoring system with virtual currency and upgradable cars.",
+      "Simple UI for navigation, settings, and game over screen.",
+      "Implemented sound effects and background music for an immersive experience.",
+    ],
+    stack: [
+      { name: "Unity", slug: "unity" },
+      { name: "C#", slug: "csharp", isDevicon: true },
     ],
     image: null,
-    url: ""
+    isBlocked: true,
+  },
+  {
+    num: "07",
+    category: "School Group Project",
+    name: "E-commerce Website - PetConnect",
+    desc:"",
+    bullets: [],
+    stack: [],
+    image: petConnect,
+    url: "https://github.com/OliverDAvino/eCommerceProject.git",
+  },
+  {
+    num: "08",
+    category: "School Group Project",
+    name: "Customized Blackjack Game",
+    desc: "",
+    bullets: [],
+    stack: [],
+    image: null,
+    isPrivate: true,
   }
 ];
 
@@ -69,9 +155,10 @@ export function ProjectsSection() {
         Projects
       </h2>
 
-      <div>
+      <div className="pb-[20vh]">
         {PROJECTS.map((p, i) => {
-          const targetScale = 1 - (PROJECTS.length - 1 - i) * 0.03;
+          // const targetScale = Math.max(0.92, 1 - (PROJECTS.length - 1 - i) * 0.02);
+          const targetScale = 1;
           const range = [i / PROJECTS.length, 1];
           return (
             <ProjectCard
@@ -100,7 +187,7 @@ interface ProjectCardProps {
 function ProjectCard({ project, index, progress, range, targetScale }: ProjectCardProps) {
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
-    <div className="h-[85vh] md:h-[80vh] sticky mb-[15vh] md:mb-[20vh]" style={{ top: `${80 + index * 24}px` }}>
+        <div className="h-[85vh] md:h-[80vh] sticky mb-[15vh] md:mb-[20vh]" style={{ top: `${80 + Math.min(index, 4) * 16}px` }}>
       <motion.div
         style={{ scale, background: "var(--page-bg)", borderColor: "var(--hairline)" }}
         className="rounded-[32px] sm:rounded-[50px] md:rounded-[60px] border-2 p-4 sm:p-6 md:p-8 h-full flex flex-col gap-4 sm:gap-6"
@@ -136,8 +223,8 @@ function ProjectCard({ project, index, progress, range, targetScale }: ProjectCa
             </div>
           </div>
           <div className="shrink-0 pt-1 sm:pt-2">
-            {(project.url || (project as any).isBlocked) && (
-              <LiveProjectButton url={project.url} isBlocked={(project as any).isBlocked} />
+            {(project.url || (project as any).isBlocked || project.isPrivate) && (
+              <LiveProjectButton url={project.url} isBlocked={project.isBlocked} isPrivate={project.isPrivate}/>
             )}
           </div>
         </div>

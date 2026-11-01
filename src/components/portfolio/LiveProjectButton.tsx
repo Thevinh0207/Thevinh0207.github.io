@@ -3,18 +3,26 @@ import { ArrowUpRight, Lock } from "lucide-react";
 interface LiveProjectButtonProps {
   url?: string;
   isBlocked?: boolean;
+  isPrivate?: boolean;
 }
 
-export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
+export function LiveProjectButton({ url, isBlocked, isPrivate }: LiveProjectButtonProps) {
   const className =
     "inline-flex items-center gap-1.5 rounded-full border-2 transition-colors hover:bg-[var(--page-fg)]/10 font-medium uppercase tracking-widest px-3 py-2 text-[10px] sm:px-6 sm:py-2.5 sm:text-xs md:px-8 md:py-3 md:text-sm lg:px-10 lg:py-3.5 lg:text-base";
   const style = { borderColor: "var(--page-fg)", color: "var(--page-fg)" };
-  
+
+  const isDisabled = isBlocked || isPrivate;
+  const tooltipText = isBlocked
+    ? "In development / Coming soon"
+    : isPrivate
+    ? "Repository is private"
+    : "";
+
   const children = (
     <>
       <span className="hidden sm:inline">View project</span>
       <span className="sm:hidden">View</span>
-      {isBlocked ? (
+      {isDisabled ? (
         <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-80" />
       ) : (
         <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={2} />
@@ -22,7 +30,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
     </>
   );
 
-  if (isBlocked) {
+  if (isDisabled) {
     return (
       <div className="relative group inline-block">
         <button
@@ -33,16 +41,16 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
         >
           {children}
         </button>
-        <span 
+        <span
           className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2.5 px-3 py-1.5 text-[10px] sm:text-xs font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap shadow-xl z-50"
           style={{
             background: "rgba(12, 12, 12, 0.9)",
             color: "#ffffff",
             border: "1px solid rgba(255, 255, 255, 0.15)",
-            backdropFilter: "blur(4px)"
+            backdropFilter: "blur(4px)",
           }}
         >
-          In development / Coming soon
+          {tooltipText}
         </span>
       </div>
     );
@@ -66,7 +74,7 @@ export function LiveProjectButton({ url, isBlocked }: LiveProjectButtonProps) {
   return (
     <button
       type="button"
-      aria-label="Coming soon / In development"
+      aria-label="View project repository"
       className={className}
       style={style}
     >
