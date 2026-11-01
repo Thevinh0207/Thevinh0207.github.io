@@ -3,29 +3,8 @@ import { FadeIn } from "./FadeIn";
 const SERVICES = [
   {
     num: "01",
-    name: "Desarrollo Frontend",
-    desc: "Construyo interfaces rápidas, accesibles y visualmente pulidas con React, TypeScript y CSS moderno, desde sistemas de diseño hasta apps listas para producción.",
-  },
-  {
-    num: "02",
-    name: "Backend & IA",
-    desc: "Diseño e implemento APIs escalables (REST/GraphQL) con Node.js y Python, integrando modelos de Inteligencia Artificial (LLMs) para dotar de capacidades inteligentes a tu producto.",
-  },
-  {
-    num: "03",
-    name: "DevOps & Despliegue",
-    desc: "Configuro pipelines CI/CD, contenedores Docker e infraestructura en la nube en AWS o Vercel para que los productos salgan con confianza y funcionen sin problemas.",
-  },
-  {
-    num: "04",
-    name: "Rendimiento & Optimización",
-    desc: "Audito y mejoro el rendimiento web mediante análisis de bundles, lazy loading, estrategias de caché y mejoras en Core Web Vitals.",
-  },
-  {
-    num: "05",
-    name: "Consultoría Técnica",
-    desc: "Ayudo a equipos a tomar mejores decisiones arquitecturales, adoptar herramientas de IA en sus flujos, mejorar la calidad del código y acelerar sus ciclos de desarrollo.",
-  },
+    name: "No Services yet.",
+    desc: "Currently, I am actively seeking opportunities to offer my services in web development and software development. If you are interested in collaborating or hiring me for your project, please feel free to reach out through the contact section.",}
 ];
 
 export function ServicesSection() {
@@ -39,7 +18,7 @@ export function ServicesSection() {
         className="font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
         style={{ color: "var(--page-fg-invert)", fontSize: "clamp(3rem, 12vw, 160px)", lineHeight: 1 }}
       >
-        Servicios
+        Services
       </h2>
 
       <div className="max-w-5xl mx-auto">

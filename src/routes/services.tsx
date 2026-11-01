@@ -20,11 +20,11 @@ export const Route = createFileRoute("/services")({
 });
 
 const navItems = [
-  { label: "INICIO", href: "/" },
-  { label: "SOBRE MÍ", href: "/#sobre-mi" },
-  { label: "EXPERIENCIA", href: "/#experiencia" },
-  { label: "PROYECTOS", href: "/#proyectos" },
-  { label: "CONTACTO", href: "#contacto" },
+  { label: "START", href: "/" },
+  { label: "ABOUT ME", href: "/#sobre-mi" },
+  { label: "EXPERIENCE", href: "/#experiencia" },
+  { label: "PROJECTS", href: "/#proyectos" },
+  { label: "CONTACT", href: "#contacto" },
 ];
 
 function ServiciosPage() {
@@ -58,7 +58,7 @@ function ServiciosPage() {
             className="font-black tracking-widest text-sm md:text-base"
             style={{ color: "var(--page-fg)", letterSpacing: "0.18em" }}
           >
-            Javier
+            The Vinh
           </a>
 
           {/* Desktop nav */}
