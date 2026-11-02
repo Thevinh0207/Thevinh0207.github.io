@@ -35,13 +35,16 @@ const socials = [
 
 export function FooterSection() {
   return (
-    <footer
-      className="w-full px-4 pb-10 sm:px-8"
-      style={{ background: "var(--page-bg)" }}
-    >
+      <footer
+        className="w-full px-4 pb-10 sm:px-8 pt-10 border-t"
+        style={{
+        background: "var(--page-bg)",
+        borderColor: "var(--hairline)",
+      }}
+      >
       <div
-        className="mx-auto max-w-7xl flex flex-col items-start justify-between gap-10 border-t pt-10 text-sm md:flex-row md:items-start"
-        style={{ borderColor: "var(--hairline)", color: "var(--page-fg)" }}
+        className="mx-auto max-w-7xl flex flex-col items-start justify-between gap-10 text-sm md:flex-row md:items-start"
+        style={{ color: "var(--page-fg)" }}
       >
         {/* Left: copyright + location */}
         <div className="flex flex-col gap-1.5" style={{ opacity: 0.5 }}>
